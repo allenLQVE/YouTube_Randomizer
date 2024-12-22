@@ -1,0 +1,191 @@
+@media screen and (max-width: 480px) {
+    .playlist>ul {
+        padding: 0;
+        list-style: none;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    .playlist>ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .playlist>ul>li {
+        font-size: small;
+    }
+
+    #playlists {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    iframe {
+        width: 80%;
+        height: 40vh;
+    }
+
+    #searchBar {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    #searchInput {
+        width: 70%;
+    }
+    
+    #searchBtn {
+        width: 20%;
+    }
+
+    .playlist>ul>li {
+        max-height: 15vh;
+    }
+
+    .playlist>ul>li>div>span {
+        height: 100%;
+        overflow-y: scroll;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    #playlists {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+    }
+
+    iframe {
+        width: 80%;
+        height: 80vh;
+    }
+
+    #searchBar {
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 5vh;
+    }
+    
+    #searchInput {
+        width: 80%;
+    }
+    
+    #searchBtn {
+        width: 10%;
+    }
+}
+
+#searchBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+#searchInput {
+    border-radius: 25px;
+    padding-left: 2%;
+}
+
+#searchBtn {
+    display: inline-block;
+    border-radius: 25px;
+    background-color: white;
+    font-weight: bold;
+    padding: 1% 2%;
+    font-size: large;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    line-height: 100%;
+}
+
+* {
+    font-size: 16px;
+}
+
+h1, h1>span {
+    font-size: xx-large;
+    font-weight: bold;
+    user-select: none;
+}
+
+#player {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.playlist>div>div>span {
+    text-wrap: wrap;
+    overflow: hidden;
+}
+
+.playlist>ul>li>img {
+    padding: 1%;
+}
+
+.playlist>ul>li>div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    margin: 2%;
+}
+
+.playlist>ul>li {
+    display: flex;
+    border-top: black thin solid;
+}
+
+.playlist>div {
+    display: flex;
+    align-items: center;
+}
+
+.playlist>div>div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.playlist {
+    background-color: white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-bottom: 1%;
+}
+
+ul {
+    height: 50vh;
+    overflow-y: auto;
+}
+
+#playlists {
+    height: 90vh; 
+    overflow: auto;
+    list-style: none;
+    padding: 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#playlists::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: red;
+}
+
+.red {
+    color: red;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.youtubeLogo {
+    border-radius: 10px;
+    color: white;
+}
