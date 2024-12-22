@@ -1,5 +1,5 @@
 const CLIENT_ID = '551393977925-uaaeav21vc89nsg6lte4kjikk0okc21m.apps.googleusercontent.com';
-const REDIRECT_URI = 'http://localhost/src/YouTube_RandomViewer/main.html';
+const REDIRECT_URI = './main.html';
 
 /**
 * This codes are from Google's tutorial. Not much changes has been done to it as it's working perfectly.
