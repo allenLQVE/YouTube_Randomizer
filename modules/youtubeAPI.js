@@ -11,7 +11,7 @@ function checkToken() {
         return true
     } else {
         localStorage.removeItem("oauth2-params");
-        window.location.href = "https://allenlqve.github.io/YouTube_Randomizer/main.html";
+        window.location.href = "https://allenlqve.github.io/YouTube_Randomizer";
         return false
     }
 }
