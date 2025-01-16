@@ -25,11 +25,10 @@ function playVideo(id, index) {
     
     const iframe = document.createElement("iframe");
     iframe.id = 'iframe'
-    iframe.src = `https://www.youtube.com/embed/${arr[index].id}?playlist=${playlist}&autoplay=1&fs=1&enablejsapi=1&origin=http://localhost`;
+    iframe.src = `https://www.youtube.com/embed/${arr[index].id}?playlist=${playlist}&autoplay=1&fs=1&enablejsapi=1`;
     iframe.allow = "autoplay;fullscreen;";
-    playerDiv.appendChild(iframe);
-    document.querySelector("body").scrollIntoView();
-    new YT.Player("iframe", {
+    
+    iframe = new YT.Player("iframe", {
         events: {
         'onStateChange': (event) => {
             if (event.data === 0) {
@@ -38,6 +37,8 @@ function playVideo(id, index) {
         }
         }
     });
+    playerDiv.appendChild(iframe);
+    document.querySelector("body").scrollIntoView();
 }
 
 /**
