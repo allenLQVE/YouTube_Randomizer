@@ -28,6 +28,7 @@ function playVideo(id, index) {
     iframe.id = 'iframe'
     iframe.src = `https://www.youtube.com/embed/${arr[index].id}?playlist=${playlist}&autoplay=1&fs=1&enablejsapi=1`;
     iframe.allow = "autoplay;fullscreen;";
+    playerDiv.appendChild(iframe);
 
     player = new YT.Player("iframe", {
         events: {
@@ -41,7 +42,6 @@ function playVideo(id, index) {
         }
     });
 
-    playerDiv.appendChild(iframe);
     document.querySelector("body").scrollIntoView();
 }
 function onPlayerStateChange(event) {
