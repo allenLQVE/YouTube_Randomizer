@@ -4,6 +4,7 @@ import PlayListDict from "./classes/PlayListDict.js";
 import PlayList from "./classes/PlayList.js";
 
 let playListsDict = new PlayListDict();
+var player;
 
 /**
  * play youtube video with IFrame
@@ -27,18 +28,18 @@ function playVideo(id, index) {
     iframe.id = 'iframe'
     iframe.src = `https://www.youtube.com/embed/${arr[index].id}?playlist=${playlist}&autoplay=1&fs=1&enablejsapi=1`;
     iframe.allow = "autoplay;fullscreen;";
-    
-    console.log(iframe);
-    new YT.Player("iframe", {
+
+    player = new YT.Player("iframe", {
         events: {
         'onStateChange': (event) => {
+            console.log(event.data);
             if (event.data === 0) {
                 playVideo(id, 200 * (multiplier + 1));
             }
         }
         }
     });
-    console.log(iframe);
+
     playerDiv.appendChild(iframe);
     document.querySelector("body").scrollIntoView();
 }
