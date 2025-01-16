@@ -32,20 +32,15 @@ function playVideo(id, index) {
 
     player = new YT.Player("iframe", {
         events: {
-            'onStateChange': onPlayerStateChange
-            // 'onStateChange': (event) => {
-            //     console.log(event.data);
-            //     if (event.data === 0) {
-            //         playVideo(id, 200 * (multiplier + 1));
-            //     }
-            // }
+            'onStateChange': (event) => {
+                if (event.data === 0) {
+                    playVideo(id, 200 * (multiplier + 1));
+                }
+            }
         }
     });
 
     document.querySelector("body").scrollIntoView();
-}
-function onPlayerStateChange(event) {
-    console.log(event.data);
 }
 
 /**
